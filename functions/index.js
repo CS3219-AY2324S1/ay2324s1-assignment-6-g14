@@ -79,6 +79,8 @@ exports.scheduledGraphQLRequest = onSchedule("0 16 * * *", async (event) => {
       categories: question.topicTags.map((e, _) => e.name),
       difficulty: question.difficulty,
       description: questionContent,
+      constraints: [],
+      tags: [],
     });
     if (add) {
       logger.log("successfully added to database");
